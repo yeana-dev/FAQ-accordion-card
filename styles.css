@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  background: -webkit-gradient(linear, left bottom, left top, from(#6565e7), to(#af67e9));
+  background: linear-gradient(0deg, #6565e7 0%, #af67e9 100%);
+  font-family: 'Kumbh Sans', sans-serif;
+  background-attachment: fixed;
+}
+
+.container {
+  margin: 50% auto;
+  top: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90vw;
+  height: 550px;
+  background-color: white;
+  font-size: 12px;
+  border-radius: 30px;
+  position: relative;
+  -webkit-box-shadow: 0 40px 40px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 40px 40px rgba(0, 0, 0, 0.2);
+}
+
+.container .main-image {
+  width: 250px;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-filter: drop-shadow(0 40px 1px #f0f0fc);
+          filter: drop-shadow(0 40px 1px #f0f0fc);
+}
+
+.container .faq {
+  margin-top: 120px;
+  padding: 0 30px;
+}
+
+.container .faq__title {
+  text-align: center;
+  font-size: 35px;
+}
+
+.container .faq .row {
+  border-bottom: 1px solid #e7e7e9;
+  color: #787887;
+}
+
+.container .faq .row:last-child {
+  margin-bottom: 50px;
+}
+
+.container .faq .row.active h2 {
+  color: #1d1e35;
+  font-weight: bold;
+}
+
+.container .faq .row.active p {
+  display: block;
+}
+
+.container .faq .row__question {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+}
+
+.container .faq .row__question h2 {
+  margin: 18px 0;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.container .faq .row__question__arrow {
+  width: 15px;
+}
+
+.container .faq .row p {
+  margin-top: 0;
+  margin-bottom: 20px;
+  display: none;
+}
+/*# sourceMappingURL=styles.css.map */
