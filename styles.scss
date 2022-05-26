@@ -105,7 +105,10 @@ body {
 
     main {
       height: 50%;
-      padding: 0 80px;
+      
+      @media screen and (min-width: 768px) {
+        padding: 0 80px;
+      }
 
       .row {
         border-bottom: 1px solid hsl(240, 5%, 91%);

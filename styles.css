@@ -146,7 +146,12 @@ body {
 
 .container .faq main {
   height: 50%;
-  padding: 0 80px;
+}
+
+@media screen and (min-width: 768px) {
+  .container .faq main {
+    padding: 0 80px;
+  }
 }
 
 .container .faq main .row {
