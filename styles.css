@@ -4,11 +4,20 @@ body {
   background: linear-gradient(0deg, #6565e7 0%, #af67e9 100%);
   font-family: 'Kumbh Sans', sans-serif;
   background-attachment: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  position: relative;
 }
 
 .container {
-  margin: 50% auto;
-  top: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26,46 +35,139 @@ body {
           box-shadow: 0 40px 40px rgba(0, 0, 0, 0.2);
 }
 
-.container .main-image {
+@media screen and (min-width: 768px) {
+  .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    min-width: 700px;
+    width: 70vw;
+    height: 530px;
+  }
+}
+
+.container .orange-box {
+  position: absolute;
+  top: 230px;
+  left: -7%;
+  width: 15%;
+  z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+  .container .orange-box {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container__image {
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+}
+
+.container__image .main-image {
   width: 250px;
   position: absolute;
-  top: -20px;
-  left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   -webkit-filter: drop-shadow(0 40px 1px #f0f0fc);
           filter: drop-shadow(0 40px 1px #f0f0fc);
+  left: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .container__image .main-image {
+    width: 100%;
+    top: 49%;
+    left: 35%;
+    -webkit-filter: none;
+            filter: none;
+    z-index: 1;
+  }
+}
+
+.container__image .bg-pattern-desktop {
+  position: absolute;
+  bottom: -30%;
+  right: 70px;
+}
+
+@media screen and (max-width: 768px) {
+  .container__image .bg-pattern-desktop {
+    display: none;
+  }
 }
 
 .container .faq {
+  position: relative;
   margin-top: 120px;
   padding: 0 30px;
+  z-index: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .container .faq {
+    width: 50%;
+    margin-top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    padding: 0;
+  }
 }
 
 .container .faq__title {
   text-align: center;
   font-size: 35px;
+  padding: 0 80px;
 }
 
-.container .faq .row {
+@media screen and (min-width: 768px) {
+  .container .faq__title {
+    margin-top: 0;
+    text-align: left;
+  }
+}
+
+.container .faq main {
+  height: 50%;
+  padding: 0 80px;
+}
+
+.container .faq main .row {
   border-bottom: 1px solid #e7e7e9;
   color: #787887;
 }
 
-.container .faq .row:last-child {
+.container .faq main .row:last-child {
   margin-bottom: 50px;
 }
 
-.container .faq .row.active h2 {
+.container .faq main .row.active h2 {
   color: #1d1e35;
   font-weight: bold;
 }
 
-.container .faq .row.active p {
+.container .faq main .row.active p {
   display: block;
 }
 
-.container .faq .row__question {
+.container .faq main .row__question {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -78,19 +180,23 @@ body {
   cursor: pointer;
 }
 
-.container .faq .row__question h2 {
+.container .faq main .row__question h2 {
   margin: 18px 0;
   font-weight: 400;
   font-size: 12px;
 }
 
-.container .faq .row__question__arrow {
-  width: 15px;
+.container .faq main .row__question .arrow {
+  margin: 10px;
 }
 
-.container .faq .row p {
+.container .faq main .row p {
   margin-top: 0;
   margin-bottom: 20px;
   display: none;
+}
+
+.container .row:hover .row__question h2 {
+  color: #f47c57;
 }
 /*# sourceMappingURL=styles.css.map */

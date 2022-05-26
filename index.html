@@ -16,14 +16,21 @@
 </head>
 <body>
   <div class="container">
-    <img src="./images/illustration-woman-online-mobile.svg" alt="Women using computer" class="main-image" />
+    <div class="container__image">
+      <picture>
+        <source media="(min-width:768px)" srcset="./images/illustration-woman-online-desktop.svg">
+        <img src="./images/illustration-woman-online-mobile.svg" alt="Women using computer" class="main-image">
+      </picture>
+      <img src="./images/bg-pattern-desktop.svg" class="bg-pattern-desktop">
+    </div>
+    <img src="./images/illustration-box-desktop.svg" alt="orange box" class="orange-box">
     <div class="faq">
       <h1 class="faq__title">FAQ</h1>
       <main>
         <section class="row">
           <header class="row__question">
             <h2>How many team members can I invite?</h2>
-            <img src="./images/icon-arrow-down.svg" alt="down arrow" class="question__arrow" />
+            <img src="./images/icon-arrow-down.svg" alt="down arrow" class="arrow" />
           </header>
           <p>You can invite up to 2 additional users on the Free plan. There is no limit on 
           team members for the Premium plan.</p>
@@ -32,7 +39,7 @@
         <section class="row">
           <header class="row__question">
             <h2>What is the maximum file upload size?</h2>
-            <img src="./images/icon-arrow-down.svg" alt="down arrow" class="question__arrow" />
+            <img src="./images/icon-arrow-down.svg" alt="down arrow" class="arrow" />
           </header>
           <p>No more than 2GB. All files in your account must fit your allotted storage space.</p>
         </section>
@@ -40,7 +47,7 @@
         <section class="row">
           <header class="row__question">
             <h2>How do I reset my password?</h2>
-            <img src="./images/icon-arrow-down.svg" alt="down arrow" class="question__arrow" />
+            <img src="./images/icon-arrow-down.svg" alt="down arrow" class="arrow" />
           </header>
           <p>Click "Forgot password" from the login page or "Change password" from your profile page.
           A reset link will be emailed to you.</p>
@@ -49,7 +56,7 @@
         <section class="row">
           <header class="row__question">
             <h2>Can I cancel my subscription?</h2>
-            <img src="./images/icon-arrow-down.svg" alt="down arrow" class="question__arrow" />
+            <img src="./images/icon-arrow-down.svg" alt="down arrow" class="arrow" />
           </header>
           <p>Yes! Send us a message and we'll process your request no questions asked.</p>
         </section>
@@ -57,7 +64,7 @@
         <section class="row">
           <header class="row__question">
             <h2>Do you provide additional support?</h2>
-            <img src="./images/icon-arrow-down.svg" alt="down arrow" class="question__arrow" />
+            <img src="./images/icon-arrow-down.svg" alt="down arrow" class="arrow" />
           </header>
           <p>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
         </section>
